@@ -1,0 +1,205 @@
+"dota_shops"
+{
+	"consumables"
+	{		
+		"item"		"item_tpscroll"
+		"item"		"item_aghanims_shard"
+		"item"		"item_potion"
+		"item"		"item_refill"
+		"item"		"item_corrupt"
+		"item"		"item_sward"
+		"item"		"item_oracle"
+		"item"		"item_far"
+		"item"		"item_elixir_iron"
+		"item"		"item_elixir_wrath"
+		"item"		"item_elixir_sorcery"
+		"item"		"item_control"
+		
+		"item"		"item_river_painter7"	
+		"item"		"item_river_painter6"	
+		"item"		"item_river_painter5"	
+		"item"		"item_river_painter4"	
+		"item"		"item_river_painter3"	
+		"item"		"item_river_painter2"	
+		"item"		"item_river_painter"
+	}
+
+	"attributes"
+	{
+		"item"		"item_emberknife"
+		"item"		"item_hailblade"
+		"item"		"item_dark_seal"
+		"item"		"item_dorans_ring"
+		"item"		"item_tear"
+		"item"		"item_spellthief"
+		"item"		"item_shoulder"
+		"item"		"item_relicshield"
+		"item"		"item_spectral"
+		"item"		"item_dorans_shield"
+		"item"		"item_dorans_blade"
+		"item"		"item_cull"
+	}
+
+	"weapons_armor"
+	{
+		"item"		"item_bead"
+		"item"		"item_faerie"
+		"item"		"item_cloth"
+		"item"		"item_dagger"
+		"item"		"item_sapphire"
+		"item"		"item_long"
+		"item"		"item_ruby"
+		"item"		"item_amp_tome"
+		"item"		"item_null_magic"
+		"item"		"item_agility_cloak"
+		"item"		"item_stopwatch"
+		"item"		"item_sheen"
+		"item"		"item_blast_wand"
+		"item"		"item_pickaxe"
+		"item"		"item_large"
+		"item"		"item_bf"
+	}
+			
+	"misc"
+	{
+		"item"		"item_boot"
+		"item"		"item_swiftness_boot"
+		"item"		"item_ionia_boot"
+		"item"		"item_mobility_boot"
+		"item"		"item_sorcerer_boot"
+		"item"		"item_berserker_boot"
+		"item"		"item_mercury_boot"
+		"item"		"item_plated_boot"
+	}
+
+	"secretshop"
+	{
+		"item"		"item_crystalline"
+		"item"		"item_kircheis"
+		"item"		"item_executioner"
+		"item"		"item_chain"
+		"item"		"item_idol"
+		"item"		"item_moonplate"
+		"item"		"item_kindlegem"
+		"item"		"item_bramble"
+		"item"		"item_rageknife"
+		"item"		"item_oblivion_orb"
+		"item"		"item_wisp"
+		"item"		"item_vampiric"
+		"item"		"item_negatron"
+		"item"		"item_glacial"
+		"item"		"item_codex"
+		"item"		"item_giant_belt"
+		"item"		"item_mirror"
+		"item"		"item_recurve"
+		"item"		"item_warden"
+		"item"		"item_seekers"
+		"item"		"item_verdant"
+		"item"		"item_zeal"
+		"item"		"item_alternator"
+		"item"		"item_phage"
+		"item"		"item_hearthbound"
+		"item"		"item_dirk"
+		"item"		"item_caulfield"
+		"item"		"item_wardstone"
+		"item"		"item_ironspike"
+		"item"		"item_bami"
+		"item"		"item_tiamat"
+		"item"		"item_cowl"
+		"item"		"item_jewel"
+		"item"		"item_quicksilver"
+		"item"		"item_hexdrinker"
+		"item"		"item_lost"
+		"item"		"item_leer"
+		"item"		"item_noonquiver"
+		"item"		"item_whisper"
+		"item"		"item_legion"
+	}
+	
+	// Level 1 - Green Recipes
+	"basics"
+	{
+		"item"		"item_abyssal"
+		"item"		"item_anathema"
+		"item"		"item_archangel"
+		"item"		"item_ardent"
+		"item"		"item_axiom"
+		"item"		"item_banshee"
+		"item"		"item_cleaver"
+		"item"		"item_ruined"
+		"item"		"item_bloodthirster"
+		"item"		"item_chempunk"
+		"item"		"item_chemtech"
+		"item"		"item_cosmic"
+		"item"		"item_deadman"
+		"item"		"item_dance"
+		"item"		"item_embrace"
+		"item"		"item_night"
+		"item"		"item_essence_reaver"
+		"item"		"item_winter"
+		"item"		"item_nature"
+		"item"		"item_frozen"
+		"item"		"item_gargoyle"
+		"item"		"item_angel"
+		"item"		"item_rageblade"
+		"item"		"item_horizon_focus"
+		"item"		"item_hull"
+		"item"		"item_infinity"
+		"item"		"item_vow"
+		"item"		"item_lich"
+		"item"		"item_dominik"
+		"item"		"item_manamune"
+		"item"		"item_maw"
+		"item"		"item_mejai"
+		"item"		"item_mercurial"
+		"item"		"item_mikael"
+		"item"		"item_morello"
+		"item"		"item_mortal"
+		"item"		"item_nashor"
+		"item"		"item_navori"
+		"item"		"item_dancer"
+		"item"		"item_rabadon"
+	}
+
+	// Level 2 - Blue Recipes
+	"support"
+	{
+		
+	}
+				
+	"magics"			
+	{
+		
+	}
+		
+	// Level 3 - Purple Recipes	
+	"defense"
+	{
+		
+	}
+			
+	"weapons"
+	{	
+		
+	}
+		
+	// Level 4 - Orange / Orb / Artifacts				
+	"artifacts"
+	{	
+		
+	}
+
+	"sideshop1"
+	{
+		
+	}
+
+	"sideshop2"
+	{
+		
+	}
+
+	"pregame"
+	{
+	}
+}
