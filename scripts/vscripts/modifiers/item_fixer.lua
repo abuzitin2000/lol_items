@@ -207,7 +207,7 @@ function item_fixer:OnIntervalThink()
 
 	-- Rock Solid
 	if modifierName == "rock_solid" then
-		item = hero:FindItemInInventory("item_frozen") or hero:FindItemInInventory("item_warden")
+		item = hero:FindItemInInventory("item_randuin") or hero:FindItemInInventory("item_frozen") or hero:FindItemInInventory("item_warden")
 	end
 
 	-- Flight

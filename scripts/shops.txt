@@ -159,6 +159,7 @@
 		"item"		"item_navori"
 		"item"		"item_dancer"
 		"item"		"item_rabadon"
+		"item"		"item_randuin"
 	}
 
 	// Level 2 - Blue Recipes

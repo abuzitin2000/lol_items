@@ -8774,4 +8774,100 @@
 			}
 		}
 	}
+
+	// Randuin's Omen Recipe
+	//---------------------------------------------------------------------------------
+	"item_recipe_randuin"
+	{
+	    "ID" 				  "1326"
+	    "BaseClass"           "item_datadriven"
+	    "AbilityTextureName"  "item_recipe"
+	    "ItemRecipe"          "1"
+	    "ItemCost"            "600"
+	    "ItemResult"          "item_randuin"
+	    "ItemRequirements"
+	    {
+	        "01" "item_warden;item_cloth;item_kindlegem;"
+	    }
+	}
+
+	// Randuin's Omen
+	//---------------------------------------------------------------------------------
+	"item_randuin"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1327"
+		"BaseClass"             		"item_lua"
+		"ScriptFile"                    "items/item_randuin"
+		"AbilityTextureName"			"item_randuin"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2700"
+		"ItemShopTags"					"health;haste;armor"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"randuin;omen"
+
+		// Ability	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastRange"       "600"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health"			"250"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"			"80"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_haste"			"10"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"rock_base"				"5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"rock_health"			"0.35"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"rock_max"				"40"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"humility_damage"		"20"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"humility_crit"			"10"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"humility_duration"		"4"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"humility_cooldown"		"60"
+			}
+		}
+	}
 }
