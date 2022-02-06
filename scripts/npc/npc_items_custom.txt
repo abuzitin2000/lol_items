@@ -8812,7 +8812,7 @@
 		// Ability	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityCastRange"       "600"
+		"AbilityCastRange"       "400"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -8867,6 +8867,76 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"humility_cooldown"		"60"
+			}
+		}
+	}
+
+	// Rapid Firecannon Recipe
+	//---------------------------------------------------------------------------------
+	"item_recipe_rapid"
+	{
+	    "ID" 				  "1328"
+	    "BaseClass"           "item_datadriven"
+	    "AbilityTextureName"  "item_recipe"
+	    "ItemRecipe"          "1"
+	    "ItemCost"            "750"
+	    "ItemResult"          "item_rapid"
+	    "ItemRequirements"
+	    {
+	        "01" "item_zeal;item_kircheis;"
+	    }
+	}
+
+	// Rapid Firecannon
+	//---------------------------------------------------------------------------------
+	"item_rapid"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1329"
+		"BaseClass"             		"item_lua"
+		"ScriptFile"                    "items/item_rapid"
+		"AbilityTextureName"			"item_rapid"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2500"
+		"ItemShopTags"					"attack_speed;crit;movement_speed"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"rapid;firecannon"
+
+		// Ability	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_attack_speed"	"35"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_crit"			"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_speed"			"7"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sharpshooter_damage"	"120"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sharpshooter_range"	"35"
 			}
 		}
 	}

@@ -160,6 +160,7 @@
 		"item"		"item_dancer"
 		"item"		"item_rabadon"
 		"item"		"item_randuin"
+		"item"		"item_rapid"
 	}
 
 	// Level 2 - Blue Recipes

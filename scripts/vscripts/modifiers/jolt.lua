@@ -64,7 +64,7 @@ function jolt:GetModifierProcAttack_BonusDamage_Magical( event )
 	ParticleManager:SetParticleControl(mkb_vfx, 0, target:GetAbsOrigin())
 	ParticleManager:ReleaseParticleIndex(mkb_vfx)
 
-	parent:EmitSound("DOTA_Item.MKB.melee")
+	target:EmitSound("DOTA_Item.MKB.melee")
 
 	mod:SetStackCount(0)
 

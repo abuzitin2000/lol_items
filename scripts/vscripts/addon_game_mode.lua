@@ -52,6 +52,7 @@ function Precache( context )
 	PrecacheResource("particle", "particles/items3_fx/lotus_orb_shield.vpcf", context)
 	PrecacheResource("particle", "particles/econ/items/crystal_maiden/ti9_immortal_staff/cm_ti9_staff_lvlup_globe.vpcf", context)
 	PrecacheResource("particle", "particles/items_fx/aegis_timer.vpcf", context)
+	PrecacheResource("particle", "particles/units/heroes/hero_dawnbreaker/dawnbreaker_solar_guardian_landing_rings.vpcf", context)
 	--[[
 		Precache things we know we'll use.  Possible file types include (but not limited to):
 			PrecacheResource( "model", "*.vmdl", context )

@@ -62,7 +62,7 @@ function item_fixer:OnIntervalThink()
 
 	-- Energized
 	if modifierName == "energized" then
-		item = hero:FindItemInInventory("item_kircheis")
+		item = hero:FindItemInInventory("item_rapid") or hero:FindItemInInventory("item_kircheis")
 	end
 
 	-- Focus
@@ -408,6 +408,11 @@ function item_fixer:OnIntervalThink()
 	-- Opus
 	if modifierName == "opus" then
 		item = hero:FindItemInInventory("item_rabadon")
+	end
+
+	-- Sharpshooter
+	if modifierName == "sharpshooter" then
+		item = hero:FindItemInInventory("item_rapid")
 	end
 
 	if item and item:GetItemSlot() < 6 then

@@ -13,12 +13,12 @@ end
 function item_randuin:OnSpellStart()
 	local caster = self:GetCaster()
 
-	local enemies = FindUnitsInRadius(caster:GetTeam(), caster:GetOrigin(), caster, 600, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, true)
+	local enemies = FindUnitsInRadius(caster:GetTeam(), caster:GetOrigin(), caster, 400, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, true)
 	for k, enemy in pairs(enemies) do
 		enemy:AddNewModifier(caster, self, "humility_debuff", { duration = self:GetSpecialValueFor("humility_duration") })
 	end
 
-	local vfx = ParticleManager:CreateParticle("particles/econ/events/new_bloom/dragon_cast_burst.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+	local vfx = ParticleManager:CreateParticle("particles/units/heroes/hero_dawnbreaker/dawnbreaker_solar_guardian_landing_rings.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
 	ParticleManager:SetParticleControl(vfx, 0, caster:GetAbsOrigin() + Vector(0, 0, 100))
 	ParticleManager:SetParticleControl(vfx, 1, caster:GetAbsOrigin() + Vector(0, 0, 100))
 	ParticleManager:ReleaseParticleIndex(vfx)
