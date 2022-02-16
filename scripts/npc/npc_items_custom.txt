@@ -8940,4 +8940,74 @@
 			}
 		}
 	}
+
+	// Ravenous Hydra Recipe
+	//---------------------------------------------------------------------------------
+	"item_recipe_hydra"
+	{
+	    "ID" 				  "1330"
+	    "BaseClass"           "item_datadriven"
+	    "AbilityTextureName"  "item_recipe"
+	    "ItemRecipe"          "1"
+	    "ItemCost"            "100"
+	    "ItemResult"          "item_hydra"
+	    "ItemRequirements"
+	    {
+	        "01" "item_tiamat;item_vampiric;item_caulfield;"
+	    }
+	}
+
+	// Ravenous Hydra
+	//---------------------------------------------------------------------------------
+	"item_hydra"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1331"
+		"BaseClass"             		"item_lua"
+		"ScriptFile"                    "items/item_hydra"
+		"AbilityTextureName"			"item_hydra"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3300"
+		"ItemShopTags"					"damage;haste;omnivamp"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"ravenous;hydra"
+
+		// Ability	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_damage"			"70"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_haste"			"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"omnivamp"				"10"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cleave_max"			"60"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cleave_min"			"12"
+			}
+		}
+	}
 }

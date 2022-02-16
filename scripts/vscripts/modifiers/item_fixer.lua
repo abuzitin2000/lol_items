@@ -42,7 +42,7 @@ function item_fixer:OnIntervalThink()
 
 	-- Cleave
 	if modifierName == "cleave" then
-		item = hero:FindItemInInventory("item_tiamat")
+		item = hero:FindItemInInventory("item_hydra") or hero:FindItemInInventory("item_tiamat")
 	end
 
 	-- Cursed

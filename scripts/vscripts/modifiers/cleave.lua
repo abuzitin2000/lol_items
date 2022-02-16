@@ -12,6 +12,18 @@ function cleave:RemoveOnDeath()
 	return false
 end
 
+function cleave:OnCreated()
+	if not IsServer() then
+		return
+	end
+
+	self.seperate = {}
+	self.dot = {}
+	self.counter = 4
+
+	self:StartIntervalThink(1)
+end
+
 function cleave:OnDestroy()
 	if not IsServer() then
 		return
@@ -22,6 +34,21 @@ function cleave:OnDestroy()
 
 	-- Fix for selling items that you have a duplicate of
 	ItemFixer(parent, self:GetName(), ability:GetAbilityName())
+end
+
+function cleave:OnIntervalThink()
+	if not IsServer() then
+		return
+	end
+
+	self.seperate = {}
+
+	if self.counter < 0 then
+		self.dot = {}
+		self.counter = 4
+	end
+
+	self.counter = self.counter - 1
 end
 
 function cleave:DeclareFunctions()
@@ -73,6 +100,23 @@ function cleave:OnTakeDamageKillCredit( event )
 		end
 	end
 
+	-- Level 2
+	if ability:GetAbilityName() == "item_hydra" then
+		-- Count damage over time
+		local inflictor = event.inflictor
+
+		-- Don't count auto attacks
+		if inflictor then
+			for k,v in pairs(self.dot) do
+				if k == tostring(target) .. tostring(inflictor) and v == true then
+					return
+				end
+			end
+
+			self.dot[tostring(target) .. tostring(inflictor)] = true
+		end
+	end
+
 	-- Cleave around target
 	local enemies = FindUnitsInRadius(parent:GetTeam(), target:GetOrigin(), parent, 350, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, true)
 	for k, enemy in pairs(enemies) do
@@ -81,6 +125,23 @@ function cleave:OnTakeDamageKillCredit( event )
   			local distance = CalcDistanceBetweenEntityOBB(target, enemy)
   			local distance_multiplier = ability:GetSpecialValueFor("cleave_max") - ability:GetSpecialValueFor("cleave_min") * (distance / 87.5)
   			local damage = parent:GetAverageTrueAttackDamage(nil) * (distance_multiplier / 100)
+
+  			-- Level 2
+			if ability:GetAbilityName() == "item_hydra" then
+				-- Count seperate abilities
+				local inflictor = event.inflictor
+
+				-- Don't count auto attacks
+				if inflictor then
+					for k,v in pairs(self.seperate) do
+						if k == enemy and v == inflictor then
+							goto continue
+						end
+					end
+
+					self.seperate[enemy] = inflictor
+				end
+			end
 
 	  		-- Deal Damage
 			local damageTable = {
@@ -97,6 +158,8 @@ function cleave:OnTakeDamageKillCredit( event )
 			ParticleManager:SetParticleControl(vfx, 1, Vector(0, 0, 0))
 			ParticleManager:SetParticleControl(vfx, 2, Vector(1, 1, 1))
 			ParticleManager:ReleaseParticleIndex(vfx)
+
+			::continue::
 		end
 	end
 

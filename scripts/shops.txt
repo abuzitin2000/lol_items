@@ -161,6 +161,7 @@
 		"item"		"item_rabadon"
 		"item"		"item_randuin"
 		"item"		"item_rapid"
+		"item"		"item_hydra"
 	}
 
 	// Level 2 - Blue Recipes
